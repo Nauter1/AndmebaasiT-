@@ -12,12 +12,10 @@ namespace DatabaseTask.Core.Domain
     {
         [Key]
         public int Id { get; set; }
-        [ForeignKey(nameof(Child.Id))]
-        public Guid ChildId { get; set; }
+        public ICollection<Child> ChildId { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
         public string Reason { get; set; }
-        [ForeignKey(nameof(Group.Id))]
-        public Guid GroupId { get; set; }
+        public ICollection<Group> GroupId { get; set; }
     }
 }

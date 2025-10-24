@@ -19,7 +19,6 @@ namespace DatabaseTask.Core.Domain
         public string DinnerSnack { get; set; }
         public DateTime Date { get; set; }
         public int Portions { get; set; }
-        [ForeignKey(nameof(Group.Id))]
-        public Guid GroupId { get; set; }
+        public ICollection<Group> GroupId { get; set; }
     }
 }

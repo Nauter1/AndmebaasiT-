@@ -10,8 +10,7 @@ namespace DatabaseTask.Core.Domain
         public Guid Id { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
-        [ForeignKey(nameof(Group.Id))]
-        public Guid GroupId { get; set; }
+        public ICollection<Group> GroupId { get; set; }
 
         /// TEINE HINDELINE HARJUTUS
         ///
