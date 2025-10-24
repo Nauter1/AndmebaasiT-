@@ -28,7 +28,7 @@ namespace DatabaseTask.Core.Domain
         /// </summary>
         //public Gender Gender { get; set; }
 
-        /// <summary>
+        /// <summary>s
         /// 
         /// Siin on info ja analüüs, et mis varianti kasutada
         /// https://stackoverflow.com/questions/10113244/why-use-icollection-and-not-ienumerable-or-listt-on-many-many-one-many-relatio/10113331
