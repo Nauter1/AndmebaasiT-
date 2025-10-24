@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 
 namespace DatabaseTask.Core.Domain
@@ -9,6 +10,8 @@ namespace DatabaseTask.Core.Domain
         public Guid Id { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
+        [ForeignKey(nameof(Group.Id))]
+        public Guid GroupId { get; set; }
 
         /// TEINE HINDELINE HARJUTUS
         ///
@@ -28,7 +31,7 @@ namespace DatabaseTask.Core.Domain
         /// </summary>
         //public Gender Gender { get; set; }
 
-        /// <summary>s
+        /// <summary>
         /// 
         /// Siin on info ja analüüs, et mis varianti kasutada
         /// https://stackoverflow.com/questions/10113244/why-use-icollection-and-not-ienumerable-or-listt-on-many-many-one-many-relatio/10113331
