@@ -19,6 +19,6 @@ namespace DatabaseTask.Core.Domain
         public string DinnerSnack { get; set; }
         public DateTime Date { get; set; }
         public int Portions { get; set; }
-        public ICollection<Group> GroupId { get; set; }
+        public IEnumerable<Group> GroupId { get; set; } = new List<Group>();
     }
 }

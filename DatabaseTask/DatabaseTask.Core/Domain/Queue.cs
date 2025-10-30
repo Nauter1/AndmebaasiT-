@@ -13,8 +13,8 @@ namespace DatabaseTask.Core.Domain
         [Key]
         public int Id { get; set; }
         public DateTime RegDate { get; set; }
-        public ICollection<Child> ChildId { get; set; }
-        public ICollection<Group> GroupId { get; set; }
-        
+        public IEnumerable<Group> GroupId { get; set; } = new List<Group>();
+        public IEnumerable<Child> ChildId { get; set; } = new List<Child>();
+
     }
 }

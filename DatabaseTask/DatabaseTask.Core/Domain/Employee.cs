@@ -8,9 +8,9 @@ namespace DatabaseTask.Core.Domain
     {
         [Key]
         public Guid Id { get; set; }
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
-        public ICollection<Group> GroupId { get; set; }
+        public string FirstName { get; set; } = string.Empty;
+        public string LastName { get; set; } = string.Empty;
+        public IEnumerable<Group> GroupId { get; set; } = new List<Group>();
 
         /// TEINE HINDELINE HARJUTUS
         ///
@@ -47,19 +47,20 @@ namespace DatabaseTask.Core.Domain
     }
 
 
-    //public enum Gender
-    //{
-    //    Female, 
-    //    Male,
-    //    Unknown
-    //}
-
-    //public class Children
-    //{
-    //    [Key]
-    //    public Guid Id { get; set; }
-
-    //    public string FirstName { get; set; }
-    //}
-}
-
+    //public enum Gender                           
+    //{                                            
+    //    Female,                                  
+    //    Male,                                    
+    //    Unknown                                  
+    //}                                            
+                                                   
+    //public class Children                        
+    //{                                            
+    //    [Key]                                    
+    //    public Guid Id { get; set; }             
+                                                   
+    //    public string FirstName { get; set; }    
+    //}                                            
+}                                                  
+                                                   
+                                                   

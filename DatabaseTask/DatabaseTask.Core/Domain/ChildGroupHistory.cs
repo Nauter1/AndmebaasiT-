@@ -11,10 +11,10 @@ namespace DatabaseTask.Core.Domain
     public class ChildGroupHistory
     {
         [Key]
-        public int Id { get; set; }
+        public Guid Id { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
-        public ICollection<Group> GroupId { get; set; }
-        public ICollection<Child> ChildId { get; set; }
+        public IEnumerable<Group> GroupId { get; set; } = new List<Group>();
+        public IEnumerable<Child> ChildId { get; set; } = new List<Child>();
     }
 }
